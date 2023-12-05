@@ -27,9 +27,9 @@ function loadAssetsElement(htmlAsset, targetElement,className) {
 }
 
 
-loadAssetsElement('./Web-CGC/templates/footer.html','footerAsset','footer-js')
-loadAssetsElement('../../templates/navbar.html','navAsset')
-loadAssetsElement('../../templates/header.html','headerAsset')
+loadAssetsElement('https://helllonely.github.io/Web-CGC/templates/footer.html','footerAsset','footer-js')
+loadAssetsElement('https://helllonely.github.io/Web-CGC/templates/navbar.html','navAsset')
+loadAssetsElement('https://helllonely.github.io/Web-CGC/templates/header.html','headerAsset')
 
 
 
