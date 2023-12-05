@@ -27,7 +27,7 @@ function loadAssetsElement(htmlAsset, targetElement,className) {
 }
 
 
-loadAssetsElement('../../templates/footer.html','footerAsset','footer-js')
+loadAssetsElement('./templates/footer.html','footerAsset','footer-js')
 loadAssetsElement('../../templates/navbar.html','navAsset')
 loadAssetsElement('../../templates/header.html','headerAsset')
 
