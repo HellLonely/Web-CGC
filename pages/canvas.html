@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <title>CGC Canvas</title>
+</head>
+<body>
+    <div id="navAsset"></div>
+    <div id="headerAsset" style="display: none;"></div>
+
+    <main class="main-canvas">
+        <div class="canvas-main">
+            <h2>Juegos Canvas </h2>
+        </div>
+
+        <div class="canvas-texting">
+            Aqui estan todos nuestros juegos creados con canvas JS, casi todos los juegos disponen de un Canvas Controller, 
+            que son una serie de controles muy basicos para poder interactuar con cada uno de los canvas.
+        </div>
+
+        <div class="canvas-games">
+
+            <section>
+                <div class="canvas-cont">
+                    <div class="canvas-title">Cuadrados Simetricos</div>
+                    <div class="canvas-description">Este juego nos muestra una serie de cuadrados dispuestos de manera diagonal, coincidiendo el centro de uno con la esquina superior izquierda del siguiente.</div>
+                </div>
+                <div class="canvas-loader" id="SquareCanvasContainer">
+                    <!-- Place Canvas Game -->
+     
+                    <canvas id="SquareCanvas" width="800" height="800"></canvas>
+
+                    <div class="canvas-controllers-master">
+                        <h4 class="canvas-text">Canvas Controllers</h4>
+                        <div class="canvas-controllers">
+                            
+                            <div class="canvas-control">
+                                <b> + Velocidad -</b>
+                                <input type="range" id="slideSquare" min="0" max="10" step="1" value="1">
+                            </div>
+                            <button id="standButtonSquare" class="button-style"></button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
+
+            <section>
+                <div class="canvas-cont">
+                    <div class="canvas-title">Circulo Concentrico</div>
+                    <div class="canvas-description">Este juego nos muestra un circulo pega a otro por el diametro interior girando, puedes controlar su velocidad.</div>
+                </div>
+                <div class="canvas-loader" id="SphereCanvasContainer">
+                    <!-- Place Canvas Game -->
+
+                    <canvas id="SphereCanvas" width="800" height="800"></canvas>
+                    <div class="canvas-controllers-master">
+                        <h4 class="canvas-text">Canvas Controllers</h4>
+                        <div class="canvas-controllers">
+                            
+                            <div class="canvas-control">
+                                <b> + Velocidad -</b>
+                                <input type="range" id="slideSphere" min="0" max="10" step="1" value="5">
+                                <button id="standButtonSphere" class="button-style"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="canvas-cont">
+                    <div class="canvas-title">Monigote</div>
+                    <div class="canvas-description">Este juego nos muestra un monigote simple, presionando Ctrl+C lo haces bailar.</div>
+                </div>
+                <div class="canvas-loader" id="MonigoteCanvasContainer" >
+                    <!-- Place Canvas Game -->
+
+                    <canvas id="MonigoteCanvas" width="400" height="400"></canvas>
+
+                    <div class="canvas-controllers-master">
+                        <h4 class="canvas-text">Canvas Controllers</h4>
+                        <div class="canvas-controllers">
+                            
+                            <div class="canvas-control">
+                                <b  id="kbd-cont"> Empezar Animacion</b>
+                                <div class="kbd-spec">
+                                    <kbd id="kbd-light_1">Ctrl</kbd> + <kbd id="kbd-light_2">C</kbd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="canvas-cont">
+                    <div class="canvas-title">Tanque</div>
+                    <div class="canvas-description">Este juego nos muestra un pequeno tanque que gira su cañon y dispara.</div>
+                </div>
+                <div class="canvas-loader">
+                    <!-- Place Canvas Game -->
+
+                    <canvas id="TankCanvas" width="800" height="800"></canvas>
+
+                    <div class="canvas-controllers-master">
+                        <h4 class="canvas-text">Canvas Controllers</h4>
+                        <div class="canvas-controllers">
+                            
+                            <div class="canvas-control">
+                                <div class="kbd-class">
+                                    <div class="kbd-spec">
+                                        <b>Movimiento</b>
+                                        <kbd id="kbd-light_3">
+                                            <span class="material-symbols-outlined kbd-arrows" >
+                                                expand_less
+                                            </span>
+                                        </kbd> 
+                                        o 
+                                        <kbd id="kbd-light_4">
+                                            <span class="material-symbols-outlined kbd-arrows">
+                                                expand_more
+                                            </span>
+                                        </kbd>
+                                    </div>
+                                    <div>
+                                        <b>Bloquear Vista</b>
+                                        <kbd id="kbd-light_5">
+                                            A
+                                        </kbd>
+                                    </div>
+                                    <div>
+                                        <b>Disparar</b>
+                                        <kbd id="kbd-light_6">
+                                            <span class="material-symbols-outlined kbd-arrows">
+                                                chevron_left
+                                            </span>
+                                        </kbd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="cardNotification"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="canvas-cont">
+                    <div class="canvas-title">Pong</div>
+                    <div class="canvas-description">Este juego nos muestra un Pong simplificado, juegas contra la pared</div>
+                </div>
+                <div class="canvas-loader" id="PongCanvasContainer">
+                    <!-- Place Canvas Game -->
+
+                    <canvas id="PongCanvas" width="800" height="800"></canvas>
+
+                    <div class="canvas-controllers-master">
+                        <h4 class="canvas-text">Canvas Controllers</h4>
+                        <div class="canvas-controllers">
+
+                            <div class="kbd-class">
+                                <div class="kbd-spec">
+                                    <b>Movimiento</b>
+                                    <kbd id="kbd-light_10">
+                                        <span class="material-symbols-outlined kbd-arrows" >
+                                            chevron_left
+                                        </span>
+                                    </kbd> 
+                                    o 
+                                    <kbd id="kbd-light_11">
+                                        <span class="material-symbols-outlined kbd-arrows">
+                                            chevron_right
+                                        </span>
+                                    </kbd>
+                                </div>
+                            </div>
+                            
+                            <div class="button-controller">
+                                <button id="restButtonPong" class="button-style">Reiniciar Juego</button>
+                                <button id="standButtonPong" class="button-style">Empezar Juego</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="canvas-cont">
+                    <div class="canvas-title">Mata Bichos</div>
+                    <div class="canvas-description">Este juego se basa en matar a los bichos que aparecen en pantalla, durente un minuto.</div>
+                </div>
+                <div class="canvas-loader">
+                    <!-- Place Canvas Game -->
+
+                    <canvas id="AlienCanvas" width="800" height="800"></canvas>
+
+                    <div class="canvas-controllers-master">
+                        <h4 class="canvas-text">Canvas Controllers</h4>
+                        <div class="canvas-controllers">                            
+                            <div class="button-controller">
+                                <button id="standButtonAliens" class="button-style">Empezar Juego</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="canvas-cont">
+                    <div class="canvas-title">Faro</div>
+                    <div class="canvas-description">Simple Faro que brilla</div>
+                </div>
+                <div class="canvas-loader">
+                    <!-- Place Canvas Game -->
+                    <canvas id="LighthouseCanvas" width="800" height="800"></canvas>
+
+                </div>
+            </section>
+
+            <section>
+                <div class="canvas-cont">
+                    <div class="canvas-title">Semaforo</div>
+                    <div class="canvas-description">Este juego nos muestra un semaforo que cambia de color, puedes pausarlo con el boton disponible</div>
+                </div>
+                <div class="canvas-loader" id="SemaforoCanvasContainer">
+                    <!-- Place Canvas Game -->
+                    <canvas id="SemaforoCanvas" width="800" height="800"></canvas>
+
+                    <div class="canvas-controllers-master">
+                        <h4 class="canvas-text">Canvas Controllers</h4>
+                        <div class="canvas-controllers">                            
+                            <div class="button-controller">
+                                <button id="standButtonSemaforo" class="button-style">Empezar Juego</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <div id="footerAsset"></div>
+</body>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/deco.js"></script>
+<script src="../assets/canvas/cuadrados.js"></script>
+<script src="../assets/canvas/sphere.js"></script>
+<script src="../assets/canvas/monigote.js"></script>
+<script src="../assets/canvas/tank.js"></script>
+<script src="../assets/canvas/pong.js"></script>
+<script src="../assets/canvas/aliens.js"></script>
+<script src="../assets/canvas/lighthouse.js"></script>
+<script src="../assets/canvas/semaforo.js"></script>
+</html>

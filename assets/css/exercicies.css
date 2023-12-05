@@ -1,0 +1,237 @@
+/*
+    Estilos del ejercicio 2
+*/
+
+.boxel{
+    position: absolute;
+    width: 500px;
+    padding: 20px;
+    border: 5px solid black;
+}
+
+.type-1{
+    top: 560px;
+    left:270px;
+    background-color: yellow !important;
+    z-index: 1;
+}
+
+.type-2{
+    top: 600px;
+    left: 320px;
+    background-color: rgb(255, 0, 0) !important;
+    z-index: 2;
+}
+
+.type-3{
+    top: 640px;
+    left: 370px;
+    background-color: rgb(0, 0, 255) !important;
+    z-index: 3;
+}
+
+/*
+    Estilos del ejercicio 3
+*/
+.main-media{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+.nav-bar-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-bar-media > a{
+    padding: 10px;
+    background-color: aqua;
+    font-style: normal;
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar-media{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/*
+    Estilos del ejercicio 4
+*/
+
+.selector-main {
+    margin-top: 50px;
+    background-color: #E1E5EF;
+    font-family: 'Verdana', 'Arial', 'Helvetica', sans-serif;
+    margin-bottom: 50px;
+}
+
+.nav-sup {
+    background-color: #E1E5EF;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    display: block;
+    padding: 10px;
+}
+
+.nav-sup > nav li:nth-child(odd) a {
+    background-color: white;
+}
+
+.text-down {
+    background-color: white;
+}
+
+.text-down p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.firstp {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.text-down p::first-letter {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3366cc;
+}
+
+
+/*
+    Estilos del ejercicio 5
+*/
+
+.grid-container {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.box {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/*
+    Estilos del ejercicio 6
+*/
+
+.nav-bar-sticky { 
+    margin-top: 10px;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 100;
+    position: fixed;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+}
+
+.ul-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-bar-sticky > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar-sticky > ul >li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-bar-sticky > ul >li >a {
+    color: #E1E5EF;
+}
+
+section {
+    height: 1000px; /* Altura de muestra */
+}
+
+/*
+    Estilos del ejercicio 9
+*/
+
+.advanced-text {
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c7aee; /* Verde */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-stroke: 2px #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.main-text{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.advanced-text:hover {
+    font-size: 30px;
+}
+
+
+/*
+    Estilos del ejercicio 8
+*/
+
+.background-container {
+    height: 100vh;
+    width: 90%;
+    background: linear-gradient(rgba(255, 0, 150, 0.8), rgba(0, 120, 255, 0.8)),
+                url('../img/wallpaper.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+
+.content {
+    text-align: center;
+    color: white;
+    mix-blend-mode: overlay; /* Cambia el modo de mezcla para el contenido sobre el fondo */
+}
